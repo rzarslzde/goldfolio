@@ -45,19 +45,27 @@ docker run --rm --name goldfolio-db \
   python scripts/goldfolio_readonly.py
 ```
 
-### 5) (Optional) Stop/remove manually started container
+### 5) Deploy with Docker Compose (same repo)
+Use normal mode for CLI:
 ```bash
-docker stop goldfolio-cli || true
+docker compose up --build goldfolio
 ```
 
-## Docker Compose Deployment (Optional)
+Use DB profile for readonly DB query:
 ```bash
-docker compose up --build
+docker compose --profile db up --build readonly-db-query
+```
+
+### 6) Stop and clean up
+```bash
+docker compose down
 ```
 
 ## Project Structure
 - `goldfolio.py` - CLI entrypoint
 - `goldfolio/app.py` - core app logic
+- `Dockerfile` - container image build definition
+- `docker-compose.yml` - compose services for CLI + DB query mode
 - `scripts/goldfolio_readonly.py` - local readonly DB query helper
 - `sql/holdings_top100.sql` - SQL query for top holdings by market value
 - `requirements.txt` - Python dependencies
