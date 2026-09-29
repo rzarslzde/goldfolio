@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "goldfolio"
+version = "0.1.0"
+description = "CLI to track gold/coin/crypto portfolio value in Toman"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.32.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["goldfolio*"]
