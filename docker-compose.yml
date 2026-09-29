@@ -1,0 +1,18 @@
+services:
+  goldfolio:
+    build: .
+    container_name: goldfolio-cli
+    command: ["python", "goldfolio.py"]
+
+  readonly-db-query:
+    build: .
+    container_name: goldfolio-db-query
+    command: ["python", "scripts/goldfolio_readonly.py"]
+    environment:
+      DB_HOST: ""
+      DB_PORT: "5432"
+      DB_NAME: "goldfolio"
+      DB_USER: ""
+      DB_PASS: ""
+      DB_SSLMODE: "require"
+    profiles: ["db"]
