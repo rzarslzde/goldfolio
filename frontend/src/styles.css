@@ -1,0 +1,56 @@
+:root {
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background: #f4f6f8;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-right: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
